@@ -1,13 +1,13 @@
 # 🚀 Arduino Uno R4 WiFi - Web Dashboard Control
 
+[![Télécharger le projet](https://img.shields.io/badge/TÉLÉCHARGER-Code%20Complet%20(ZIP)-blue?style=for-the-badge&logo=github)](https://github.com/corentin-edu/arduino-r4-wifi/archive/refs/heads/main.zip)
+
 **Projet de fin de séquence - Session 2025/2026** **Développé par :** Corentin PORCQ (Classe : 2TNE1)
 
 ---
 
 ## 📝 À propos du projet
 Ce projet consiste en la création d'un **système domotique miniature** piloté par une interface web interactive. L'objectif est de transformer une carte Arduino Uno R4 WiFi en un serveur capable de gérer des sorties physiques (LEDs) et des entrées capteurs (Température/Humidité) de manière sécurisée.
-
-
 
 ### 🤖 Note Pédagogique
 Dans le cadre de ce projet, **l'utilisation de l'intelligence artificielle a été autorisée pour la programmation** afin d'accompagner le développement et la compréhension du code.
@@ -30,11 +30,12 @@ Dans le cadre de ce projet, **l'utilisation de l'intelligence artificielle a ét
 > **Pour mettre en service le projet, veuillez impérativement suivre les étapes détaillées dans le fichier `plan-installation.pdf` présent dans ce dépôt.**
 
 ### Résumé de la procédure :
-1.  **Câblage :** Connectez les 5 LEDs (Pins 9 à 13) et le capteur DHT22 (Pin 6) comme indiqué dans le PDF.
-2.  **Configuration :** Modifiez les variables `ssid` et `pass` dans le code avec vos identifiants WiFi.
-3.  **Téléversement :** Utilisez l'Arduino IDE pour envoyer le code vers la carte.
-4.  **Accès :** Récupérez l'adresse IP via le moniteur série et ouvrez-la dans votre navigateur.
-5.  **Validation :** Tapez `y` dans le moniteur série pour autoriser votre propre connexion (système de sécurité intégré).
+1.  **Téléchargement :** Cliquez sur le bouton bleu en haut de cette page pour récupérer l'archive ZIP.
+2.  **Câblage :** Connectez les 5 LEDs (Pins 9 à 13) et le capteur DHT22 (Pin 6) comme indiqué dans le PDF.
+3.  **Configuration :** Modifiez les variables `ssid` et `pass` dans le code avec vos identifiants WiFi.
+4.  **Téléversement :** Utilisez l'Arduino IDE pour envoyer le code vers la carte.
+5.  **Accès :** Récupérez l'adresse IP via le moniteur série et ouvrez-la dans votre navigateur.
+6.  **Validation :** Tapez `y` dans le moniteur série pour autoriser votre propre connexion.
 
 ---
 
