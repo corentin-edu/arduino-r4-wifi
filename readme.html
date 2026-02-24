@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Uno R4 WiFi - Project Dashboard</title>
+    <title>Arduino Uno R4 WiFi - Project Documentation</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -14,36 +14,44 @@
             padding: 40px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: #161b22;
-            padding: 30px;
+            padding: 45px;
             border: 1px solid #30363d;
             border-radius: 6px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
         }
-        h1 { border-bottom: 1px solid #30363d; padding-bottom: 10px; color: #f0f6fc; }
-        h2 { border-bottom: 1px solid #30363d; padding-bottom: 8px; margin-top: 30px; color: #f0f6fc; }
+        h1 { border-bottom: 1px solid #30363d; padding-bottom: 10px; color: #f0f6fc; margin-top: 0; }
+        h2 { border-bottom: 1px solid #30363d; padding-bottom: 8px; margin-top: 35px; color: #f0f6fc; }
+        h3 { color: #f0f6fc; margin-top: 25px; }
         code {
             background-color: #6e768166;
             padding: 2px 5px;
             border-radius: 3px;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 90%;
         }
         .important-box {
-            background-color: #161b22;
+            background-color: rgba(210, 153, 34, 0.1);
+            border: 1px solid #d29922;
             border-left: 5px solid #d29922;
-            padding: 15px;
-            margin: 20px 0;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 6px 6px 0;
         }
         .note-ia {
-            background-color: #112131;
+            background-color: rgba(56, 139, 253, 0.1);
             border: 1px solid #388bfd;
-            padding: 15px;
+            padding: 20px;
             border-radius: 6px;
-            margin-top: 20px;
+            margin: 25px 0;
         }
-        hr { border: 0; border-top: 1px solid #30363d; margin: 30px 0; }
-        .badge-link:hover { opacity: 0.8; }
+        hr { border: 0; border-top: 1px solid #30363d; margin: 40px 0; }
+        ul, ol { padding-left: 25px; }
+        li { margin-bottom: 10px; }
+        .badge-link:hover { opacity: 0.8; transition: 0.2s; }
+        .footer { font-size: 0.85em; font-style: italic; color: #8b949e; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -51,40 +59,72 @@
 <div class="container">
     <h1>🚀 Arduino Uno R4 WiFi - Web Dashboard Control</h1>
     
-    <p><strong>Projet de fin de séquence - Session 2025/2026</strong></p>
-    <p><strong>Développé par :</strong> Corentin PORCQ (Classe : 2TNE1)</p>
-
-    <div style="margin: 25px 0;">
+    <div style="margin: 20px 0;">
         <a href="https://github.com/corentin-edu/arduino-r4-wifi/archive/refs/heads/main.zip" class="badge-link">
             <img src="https://img.shields.io/badge/TÉLÉCHARGER-Code%20Complet%20(ZIP)-blue?style=for-the-badge&logo=github" 
                  alt="Télécharger le projet">
         </a>
     </div>
 
-    <div class="note-ia">
-        <strong>🤖 Note Pédagogique :</strong><br>
-        Dans le cadre de ce projet, <strong>l'utilisation de l'intelligence artificielle a été autorisée pour la programmation</strong> afin d'accompagner le développement et la compréhension du code.
-    </div>
+    <p><strong>Projet de fin de séquence - Session 2025/2026</strong><br>
+    <strong>Développé par :</strong> Corentin PORCQ (Classe : 2TNE1)</p>
+
+    <hr>
 
     <h2>📝 À propos du projet</h2>
     <p>Ce projet consiste en la création d'un <strong>système domotique miniature</strong> piloté par une interface web interactive. L'objectif est de transformer une carte Arduino Uno R4 WiFi en un serveur capable de gérer des sorties physiques (LEDs) et des entrées capteurs (Température/Humidité) de manière sécurisée.</p>
 
+    <div class="note-ia">
+        <h3>🤖 Note Pédagogique</h3>
+        <p>Dans le cadre de ce projet, <strong>l'utilisation de l'intelligence artificielle a été autorisée pour la programmation</strong> afin d'accompagner le développement et la compréhension du code.</p>
+    </div>
+
+    <h3>Fonctionnalités clés :</h3>
+    <ul>
+        <li><strong>Interface Web (Dashboard) :</strong> Une page moderne permettant d'allumer/éteindre 5 LEDs individuellement ou par groupe.</li>
+        <li><strong>Modes d'animations :</strong> Intégration de cycles lumineux (Chenille, Essuie-glace, Aller-retour, Alterné).</li>
+        <li><strong>Monitoring :</strong> Affichage en temps réel des données du capteur <strong>DHT22</strong> (Température & Humidité).</li>
+        <li><strong>Sécurité d'accès :</strong> Système d'autorisation manuelle via le moniteur série (Logique <code>y/n</code>) pour valider chaque session utilisateur.</li>
+    </ul>
+
     <h2>🛠 Matériel utilisé</h2>
     <ul>
         <li><strong>Microcontrôleur :</strong> Arduino Uno R4 WiFi</li>
-        <li><strong>Capteur :</strong> DHT22 (Température et Humidité)</li>
+        <li><strong>Capteur :</strong> DHT22 (Capteur de température et d'humidité)</li>
         <li><strong>Actionneurs :</strong> 5 LEDs + 5 Résistances de 220Ω</li>
-        <li><strong>Logiciel :</strong> Arduino IDE</li>
+        <li><strong>Logiciel :</strong> Arduino IDE avec bibliothèques <code>WiFiS3</code> et <code>DHT sensor library</code></li>
     </ul>
 
-    <div class="important-box">
-        <strong>⚠️ IMPORTANT :</strong> Pour mettre en service le projet, veuillez impérativement suivre les étapes détaillées dans le fichier <code>plan-installation.pdf</code>.
-    </div>
+    <h2>📂 Contenu du dossier</h2>
+    <ul>
+        <li><code>arduino_code.ino</code> : Le code source principal (C++).</li>
+        <li><strong><code>plan-installation.pdf</code></strong> : Le guide complet à suivre pour l'installation et le câblage.</li>
+    </ul>
 
     <hr>
-    <p style="font-size: 0.9em; font-style: italic; color: #8b949e;">
+
+    <h2>📖 Comment l'installer ?</h2>
+
+    <div class="important-box">
+        <strong>⚠️ IMPORTANT :</strong> Pour mettre en service le projet, veuillez impérativement suivre les étapes détaillées dans le fichier <strong>plan-installation.pdf</strong>.
+    </div>
+
+    <h3>Résumé de la procédure :</h3>
+    <ol>
+        <li><strong>Téléchargement :</strong> Cliquez sur le bouton bleu en haut de cette page pour récupérer l'archive ZIP.</li>
+        <li><strong>Câblage :</strong> Connectez les 5 LEDs (Pins 9 à 13) et le capteur DHT22 (Pin 6) comme indiqué dans le schéma du PDF.</li>
+        <li><strong>Configuration :</strong> Ouvrez le code avec Arduino IDE et modifiez les variables <code>ssid</code> et <code>pass</code> avec vos identifiants WiFi.</li>
+        <li><strong>Téléversement :</strong> Envoyez le code vers la carte Arduino Uno R4 WiFi.</li>
+        <li><strong>Accès :</strong> Ouvrez le moniteur série (9600 baud), récupérez l'adresse IP et ouvrez-la dans votre navigateur web.</li>
+        <li><strong>Validation :</strong> Tapez <code>y</code> dans le moniteur série pour autoriser la connexion entrante.</li>
+    </ol>
+
+    <h2>⚙️ Détails Techniques</h2>
+    <p>L'interface web est directement intégrée dans le code Arduino. Elle utilise du <strong>JavaScript</strong> pour gérer les requêtes HTTP asynchrones (Fetch API), permettant de contrôler les LEDs sans recharger la page. Le projet supporte également des raccourcis clavier pour un contrôle fluide et une réactivité optimale.</p>
+
+    <div class="footer">
         Projet réalisé dans un cadre pédagogique pour démontrer la maîtrise des serveurs web embarqués sur microcontrôleur.
-    </p>
+    </div>
 </div>
 
 </body>
